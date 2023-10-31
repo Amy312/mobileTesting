@@ -12,16 +12,17 @@ public class Android implements IDevice{
     @Override
     public AppiumDriver create() {
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("deviceName","UPB2023_Android9");
-        capabilities.setCapability("platformVersion","9.0");
-        capabilities.setCapability("appPackage","com.android.calculator2");
-        capabilities.setCapability("appActivity","com.android.calculator2.Calculator");
+        capabilities.setCapability("deviceName","Amy4n");
+        capabilities.setCapability("platformVersion","13");
+        capabilities.setCapability("appPackage","com.hihonor.deskclock");
+        capabilities.setCapability("appActivity","com.android.deskclock.AlarmsMainActivity");
         capabilities.setCapability("platformName","Android");
         capabilities.setCapability("automationName","uiautomator2");
 
         AndroidDriver device = null;
         try {
-            device = new AndroidDriver(new URL(" http://192.168.50.144:4723/wd/hub"),capabilities);
+            device = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }
